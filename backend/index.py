@@ -2,16 +2,34 @@
 from flask import Flask, request, jsonify
 from flask_bcrypt import Bcrypt
 from models import db, User
+import datetime
+import jwt
 from config import ApplicationConfig
 
 app = Flask(__name__)
 app.config.from_object(ApplicationConfig)
-
-bcrypt = Bcrypt(app)
 db.init_app(app)
 
-with app.app_context():
-    db.create_all()
+def generate_token(user_id):
+    payload = {
+        'user_id': user_id,
+        #data
+        'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+    }
+    return jwt.encode(payload, app.config['SECRET_KEY'], algorithm='HS256')
+
+def decode_token(token):
+    try:
+        return jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+    except jwt.ExpiredSignatureError:
+        return {'error': 'Token expired'}
+    except jwt.InvalidTokenError:
+        return {'error': 'Invalid token'}
+
+
+
+""" bcrypt = Bcrypt(app)
+db.init_app(app)
 
 @app.route("/register", methods=["POST"])
 def register_user():
@@ -50,7 +68,8 @@ def login_user():
         "id": user.id,
         "email": user.email
     })
-
+ """
 
 if __name__ == "__main__":
+    db.create_all()
     app.run(debug=True)
