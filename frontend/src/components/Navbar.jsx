@@ -12,7 +12,9 @@ function Navbar() {
             <li className="navbar__item"><Link to="/">CONTACT</Link></li>
           </ul>
         
-          <p>logo</p>
+          <button>
+            login
+          </button>
           
         </div>
     </nav>
