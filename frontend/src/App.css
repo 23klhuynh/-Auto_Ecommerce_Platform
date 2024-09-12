@@ -1,11 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family:'Courier New', Courier, monospace;
 }
 
 /* navbar */
@@ -35,4 +37,64 @@
     color: black;
     font-size: 1.2rem;
 }
+/* login_form */
+.login{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.login__section{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login__box{
+    width: 60%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.login__header{
+    font-size: 2rem;
+}
+.login__form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.login__form input{
+    height: 60px;
+    border-bottom: 2px solid grey;
+    border-radius: 5px;
+}
+.btns{
+    display: flex;
+    height: 50px;
+    gap: 5px;
+}
+.login__btn, .logout__btn{
+    flex: 1;
+    cursor: pointer;
+}
+.login__btn{
+    background-color: rgb(29, 29, 99);
+    color: white;
+}
+.logout__btn{
+    border: 2px solid rgb(255, 158, 174) ;
+}
+
+.login__image{
+    flex: 1;
+}
+.login__image img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
 
