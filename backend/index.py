@@ -13,7 +13,7 @@ CORS(app)
 app.config.from_object(ApplicationConfig)
 db.init_app(app)
 
-<<<<<<< HEAD
+
 def generate_token(user_id):
     payload = {
         'user_id': user_id,
@@ -34,7 +34,7 @@ def decode_token(token):
 
 """ bcrypt = Bcrypt(app)
 db.init_app(app)
-=======
+
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = "login"
@@ -44,7 +44,7 @@ def load_user(user_id):
 
 with app.app_context():
     db.create_all()
->>>>>>> auth_page
+
 
 @app.route("/login", methods=["POST"])
 def login():
@@ -75,7 +75,7 @@ def register():
     db.session.add(new_user)
     db.session.commit()
     
-<<<<<<< HEAD
+
     if bcrypt.check_password_hash(user.password, password):
         return jsonify({"error": "Unauthorized"}), 401
     
@@ -86,21 +86,5 @@ def register():
  """
 
 if __name__ == "__main__":
-    db.create_all()
     app.run(debug=True)
-=======
-    return jsonify({"success": True, "message": "User registered successfully"})
 
-@app.route("/dashboard", methods=['GET'])
-@login_required
-def dashboard():
-    return jsonify({"message": "Welcome to the dashboard!"})
-
-@app.route("/logout", methods=["POST"])
-def logout():
-    logout_user()
-    return jsonify({"success": True, "message": "Logged out successfully"})
-
-if __name__ == "__main__":
-    app.run(debug=True)
->>>>>>> auth_page
