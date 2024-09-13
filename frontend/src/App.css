@@ -38,34 +38,34 @@
     font-size: 1.2rem;
 }
 /* login_form */
-.login{
+.login, .register{
     display: flex;
     height: 100vh;
     width: 100%;
 }
-.login__section{
+.login__section, .register__section{
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.login__box{
+.login__box, .register__box{
     width: 60%;
     height: 60%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.login__header{
+.login__header, .register__header{
     font-size: 2rem;
 }
-.login__form{
+.login__form, .register__form{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.login__form input{
+.login__form input, .register__form input{
     height: 60px;
     border-bottom: 2px solid grey;
     border-radius: 5px;
@@ -75,7 +75,7 @@
     height: 50px;
     gap: 5px;
 }
-.login__btn, .logout__btn{
+.login__btn, .register__btn{
     flex: 1;
     cursor: pointer;
 }
@@ -83,7 +83,7 @@
     background-color: rgb(29, 29, 99);
     color: white;
 }
-.logout__btn{
+.register__btn{
     border: 2px solid rgb(255, 158, 174) ;
 }
 

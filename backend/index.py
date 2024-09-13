@@ -52,6 +52,7 @@ def register():
     db.session.add(new_user)
     db.session.commit()
     
+    print("success")
     return jsonify({"success": True, "message": "User registered successfully"})
 
 @app.route("/dashboard", methods=['GET'])
