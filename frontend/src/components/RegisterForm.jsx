@@ -2,41 +2,42 @@ import React, {useState} from 'react'
 import axios from "axios"
 import LoginImg from "../assets/LoginImg.jpg"
 
-function LoginForm() {
+
+function RegisterForm() {
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
         try{
-            const response = await axios.post("http://127.0.0.1:5000/login", { email, password });
+            const response = await axios.post("http://127.0.0.1:5000/register", {email, password});
+
             if (response.data.success){
-                console.log("success");
+                print("success: no same email")
             }else{
-                console.log("fail");
+                print("fail, the email is already exist")
             }
         }catch(error){
-            console.log(error)
+            print("error")
         }
-
     }
-
   return (
-    <div className="login">
-        <div className="login__section"> {/* flex = 1 */}
-            <div className="login__box">
-                <div className="login__header">
+    <div className="register">
+        <div className="register__section"> {/* flex = 1 */}
+            <div className="register__box">
+                <div className="register__header">
                     <h1 className="">Hello,</h1>
                     <h2 className="">Welcome!</h2>
                 </div>
-                <form onSubmit={handleSubmit} className="login__form"> {/* flex=2 */}
+                <form onSubmit={handleSubmit} className="register__form"> {/* flex=2 */}
                     <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder=" Email!"/>
                     <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder=" Password!"/>
+                    <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder=" Confirmed!"/>
                 </form>
                 <div className="btns">
-                    <button className="login__btn" onClick={(e)=>handleSubmit(e)}>Login</button>
-                    <button className="register__btn">Register</button>
+                    <button className="login__btn bg-blue-950" onClick={(e)=>handleSubmit(e)}>Sign up</button>
+                    
                 </div>
             </div>
         </div>
@@ -47,4 +48,4 @@ function LoginForm() {
   )
 }
 
-export default LoginForm
+export default RegisterForm
