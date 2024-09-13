@@ -51,8 +51,7 @@ def register():
     new_user = User(user_email=email, password=hashed_password)
     db.session.add(new_user)
     db.session.commit()
-    
-    print("success")
+
     return jsonify({"success": True, "message": "User registered successfully"})
 
 @app.route("/dashboard", methods=['GET'])
