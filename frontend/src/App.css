@@ -94,6 +94,13 @@
 .register__btn {
   border: 2px solid rgb(255, 158, 174);
 }
+.register__btns{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 100px;
+}
+
 
 
 .login__image {

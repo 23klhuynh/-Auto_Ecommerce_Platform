@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import LoginImg from "../assets/LoginImg.jpg";
+import { Link } from "react-router-dom";
 
-/* work on the buttons */
+
 
 function RegisterForm() {
   const [email, setEmail] = useState("");
@@ -62,18 +63,26 @@ function RegisterForm() {
               placeholder="Confirmed!"
             />
           </form>
-          <div className="btns">
+          <div className="register__btns">
+            {/* <button className="login__btn" onClick={(e) => handleSubmit(e)}>
+              Login
+              </button> */}
+            <p className="register__recommend">
+              Already a Member? <Link className="to-blue-900">Sign In</Link>
+            </p>
+
+            <button
+              className="register__btn"
+              onClick={(e) => handleSubmit(e)}
+            >
+              Sign up
+            </button>
+
             {message && (
               <span className="btn text-red-400 flex justify-center">
                 {message}
               </span>
             )}
-            <div className="btn">
-                <button className="login__btn" onClick={(e) => handleSubmit(e)}>
-                Login
-                </button>
-                <button className="register__btn" onClick={() => navigate("/register")}>Sign up</button>
-            </div>
           </div>
         </div>
       </div>
