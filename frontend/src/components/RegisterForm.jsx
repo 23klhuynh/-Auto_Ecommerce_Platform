@@ -67,7 +67,7 @@ function RegisterForm() {
           <div className="register__btns">
             <div className="register__footer">
               <p className="register__recommend text-xs sm:text-xs md:text-sm lg:text-md xl:text-xl">
-                Already a Member? <Link className="text-blue-700">Sign In</Link>
+                Already a Member? <button className="text-blue-700" onClick={()=>navigate("/login")}>Sign In</button>
               </p>
 
               <button

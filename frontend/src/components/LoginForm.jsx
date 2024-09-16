@@ -48,8 +48,6 @@ function LoginForm() {
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Password!"
             />
-          </form>
-          <div className="login__btns">
             <div className="login__footer">
               <button className="login__btn" onClick={(e) => handleSubmit(e)}>
                 Login
@@ -61,6 +59,8 @@ function LoginForm() {
                 Sign up
               </button>
             </div>
+          </form>
+          <div className="login__btns">
             {message && <span className="btn text-red-400">{message}</span>}
           </div>
         </div>
