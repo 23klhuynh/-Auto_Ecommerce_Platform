@@ -35,11 +35,11 @@ function RegisterForm() {
   return (
     <div className="register">
       <div className="register__section">
-      <div className="register__header">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
-              Sign up
-            </h1>
-          </div>
+        <div className="register__header">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+            Sign Up
+          </h1>
+        </div>
         <div className="register__box">
           <form onSubmit={handleSubmit} className="register__form">
             <input
@@ -78,11 +78,7 @@ function RegisterForm() {
               </button>
             </div>
 
-            {message && (
-              <span className="btn text-red-400 flex justify-center">
-                {message}
-              </span>
-            )}
+            {message && <span className="btn text-red-400">{message}</span>}
           </div>
         </div>
       </div>
