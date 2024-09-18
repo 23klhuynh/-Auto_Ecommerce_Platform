@@ -11,6 +11,8 @@ function RegisterForm() {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
+  localStorage.removeItem("authToken");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password == comfirmPassword) {
@@ -76,9 +78,9 @@ function RegisterForm() {
               >
                 Sign up
               </button>
+              {message && <span className="btn text-red-400">{message}</span>}
             </div>
-
-            {message && <span className="btn text-red-400">{message}</span>}
+            
           </div>
         </div>
       </div>

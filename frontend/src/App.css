@@ -103,11 +103,12 @@
 }
 .register__btn {
   border: 2px solid rgb(255, 158, 174);
+  flex: 1;
 }
 .register__footer{
   display: flex;
   flex-direction: column;
-  height: 70px;
+  height: 50%;
 }
 
 
