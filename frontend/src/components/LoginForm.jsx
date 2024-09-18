@@ -19,8 +19,8 @@ function LoginForm() {
       });
       if (response.data.success) {
         console.log("success");
-        localStorage.setItem("authToken", "some-token-here");
         navigate("/dashboard");
+        /* localStorage.setItem("authToken", "some-token-here"); */
       } else {
         console.log("fail");
         setMessage("Username Invalid!");

@@ -5,6 +5,7 @@ import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
 import PrivateRoute from "./components/PrivateRoute";
 import Dashboard from "./pages/Dashboard";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
               </PrivateRoute>
             }
           />
-          
+          <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
       </Router>
     </>

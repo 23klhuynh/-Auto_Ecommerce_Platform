@@ -1,10 +1,11 @@
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, make_response
 from flask_bcrypt import Bcrypt
 from models import db, User
 from config import ApplicationConfig
 from flask_login import LoginManager, login_required, logout_user, login_user, current_user
 from flask_cors import CORS 
+
 
 app = Flask(__name__)
 CORS(app)
@@ -34,7 +35,10 @@ def login():
     user = User.query.filter_by(user_email=email).first()
     if user and bcrypt.check_password_hash(user.password, password):
         login_user(user)
-        return jsonify({"success": True, "message": "Login successful"})
+        token = "jsdbsv"
+        response = make_response(jsonify({"success": True, "message": "Login successful"}))
+        response.set_cookie("authToken", token, httponly=True)
+        return response
     
     return jsonify({"success": False, "message": "Invalid credentials"})
 
