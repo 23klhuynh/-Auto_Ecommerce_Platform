@@ -11,7 +11,6 @@ function App() {
   return (
     <>
       <Router>
-        {/* <Navbar/> */}
         <Routes>
           <Route exact path="/login" element={<LoginForm />} />
           <Route exact path="/register" element={<RegisterForm />} />
@@ -20,11 +19,14 @@ function App() {
             path="/dashboard"
             element={
               <PrivateRoute>
-                <Dashboard />
+                <>
+                  <Navbar />
+                  <Dashboard />
+                </>
               </PrivateRoute>
             }
           />
-          <Route path="*" element={<NotFoundPage/>}/>
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Router>
     </>

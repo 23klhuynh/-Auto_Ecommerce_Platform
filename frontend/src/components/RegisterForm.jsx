@@ -11,7 +11,7 @@ function RegisterForm() {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  /* localStorage.removeItem("authToken"); */
+  localStorage.removeItem("authToken");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
