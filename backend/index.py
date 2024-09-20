@@ -35,10 +35,11 @@ def login():
     user = User.query.filter_by(user_email=email).first()
     if user and bcrypt.check_password_hash(user.password, password):
         login_user(user)
-        token = "jsdbsv"
+        """ token = "jsdbsv"
         response = make_response(jsonify({"success": True, "message": "Login successful"}))
         response.set_cookie("authToken", token, httponly=True)
-        return response
+        return response """
+        return jsonify({"success": True, "message": "Login successful"})
     
     return jsonify({"success": False, "message": "Invalid credentials"})
 

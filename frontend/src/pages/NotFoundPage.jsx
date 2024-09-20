@@ -1,7 +1,7 @@
 import React from 'react'
 
 function NotFoundPage() {
-    /* localStorage.removeItem("authToken"); */
+    localStorage.removeItem("authToken");
   return (
     <div>NotFoundPage</div>
   )
