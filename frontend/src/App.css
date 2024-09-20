@@ -15,7 +15,7 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: grey;
+  background-color: #1F2937; /* important */
   height: 70px;
   display: flex;
   justify-content: center;
@@ -24,7 +24,9 @@
 .navbar__margin {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  align-items: center;
+  width: 85%;
+  color: #e0e0e0;
 }
 .navbar__items {
   display: flex;
@@ -33,9 +35,27 @@
 }
 .navbar__item a {
   text-decoration: none;
-  color: black;
   font-size: 1.2rem;
+  font-weight: 500;
 }
+.navbar__item a:hover{
+  color: white;
+}
+.navbar__btn{
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  background-color: #1D4ED8;
+  font-weight: 500;
+}
+.navbar__btn:hover{
+  background-color: #1A3EAB;
+}
+.navbar__mobile{
+  font-size: 1.5rem;
+}
+
 /* login_form */
 .login,
 .register {
@@ -155,3 +175,20 @@
     backdrop-filter: blur(2px);
   }
 } 
+
+@media screen and (min-width: 550px){
+  .navbar__mobile{
+    display: none;
+  }
+  .navbar__items{
+    display: inherit;
+  }
+}
+@media screen and (max-width: 550px){
+  .navbar__mobile{
+    display: inherit;
+  }
+  .navbar__items{
+    display: none;
+  }
+}
