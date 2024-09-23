@@ -29,6 +29,8 @@ function LoginForm() {
       console.log(error);
     }
   };
+  
+  localStorage.removeItem("authToken");
 
   return (
     <div className="login">

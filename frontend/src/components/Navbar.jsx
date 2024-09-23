@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <header>
       <nav className="navbar">
@@ -25,7 +28,7 @@ function Navbar() {
             </li>
           </ul>
 
-          <button className="navbar__btn">Logout</button>
+          <button className="navbar__btn" onClick={()=>navigate("/login")}>Logout</button>
         </div>
       </nav>
     </header>
