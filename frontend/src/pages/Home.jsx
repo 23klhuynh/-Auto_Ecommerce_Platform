@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-function Dashboard() {
+function Home() {
     const navigate = useNavigate();
     useEffect(()=>{
         const authentication = async () =>{
@@ -18,8 +18,27 @@ function Dashboard() {
         authentication();
     }, [navigate])
   return (
-    <div>Dashboard</div>
+    <main className="home_container">
+        <section className="home-page">
+            <div className="home__search-bar">
+                <ul>
+                    <li>
+                        Maker
+                    </li>
+                    <li>
+                        Model
+                    </li>
+                    <li>
+                        Year
+                    </li>
+                    <li>
+                        Type
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
   )
 }
 
-export default Dashboard
+export default Home;

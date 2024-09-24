@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
 import PrivateRoute from "./components/PrivateRoute";
-import Dashboard from "./pages/Dashboard";
+import Home from "./pages/Home";
 import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
@@ -16,12 +16,12 @@ function App() {
           <Route exact path="/register" element={<RegisterForm />} />
           <Route
             exact
-            path="/dashboard"
+            path="/home"
             element={
               <PrivateRoute>
                 <>
                   <Navbar />
-                  <Dashboard />
+                  <Home />
                 </>
               </PrivateRoute>
             }

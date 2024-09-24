@@ -19,7 +19,7 @@ function LoginForm() {
       });
       if (response.data.success) {
         console.log("success");
-        navigate("/dashboard");
+        navigate("/home");
         localStorage.setItem("authToken", "some-token-here");
       } else {
         console.log("fail");
