@@ -6,8 +6,11 @@ import RegisterForm from "./components/RegisterForm";
 import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
 import NotFoundPage from "./pages/NotFoundPage";
+import useScroll from "./components/useScroll";
 
 function App() {
+  
+  const isScrolled = useScroll()
   return (
     <>
       <Router>
@@ -20,7 +23,7 @@ function App() {
             element={
               <PrivateRoute>
                 <>
-                  <Navbar />
+                  <Navbar isScrolled={isScrolled}/>
                   <Home />
                 </>
               </PrivateRoute>

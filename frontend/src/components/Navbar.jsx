@@ -1,14 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
 
-function Navbar() {
+
+function Navbar({ isScrolled }) {
   const navigate = useNavigate();
 
   return (
     <header>
-      <nav className="navbar">
+      <nav className={`navbar ${isScrolled ? "" : "nav-default"}`}>
         <div className="navbar__margin">
           <button className="navbar__mobile">
             <GiHamburgerMenu />
