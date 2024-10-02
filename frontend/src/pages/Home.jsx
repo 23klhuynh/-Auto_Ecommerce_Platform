@@ -27,7 +27,7 @@ function Home() {
           <li>
             <select name="maker" id="" className="home__dropdown">
               <option value="" disabled selected>
-                Select Maker
+                Maker
               </option>
               <option value="hello">hello</option>
             </select>
@@ -35,7 +35,7 @@ function Home() {
           <li>
             <select name="model" id="" className="home__dropdown">
               <option value="" disabled selected>
-                Select Model
+                Model
               </option>
               <option value="hello">hello</option>
             </select>
@@ -43,7 +43,7 @@ function Home() {
           <li>
             <select name="year" id="" className="home__dropdown">
               <option value="" disabled selected>
-                Select Year
+                Year
               </option>
               <option value="hello">hello</option>
             </select>
@@ -51,7 +51,7 @@ function Home() {
           <li>
             <select name="price" id="" className="home__dropdown">
               <option value="" disabled selected>
-                Select Price
+                Price
               </option>
               <option value="hello">hello</option>
             </select>
@@ -59,7 +59,7 @@ function Home() {
           <li>
             <select name="condition" id="" className="home__dropdown">
               <option value="" disabled selected>
-                Select Condition
+                Condition
               </option>
               <option value="hello">hello</option>
             </select>
@@ -67,7 +67,7 @@ function Home() {
           <li>
             <select name="type" id="" className="home__dropdown">
               <option value="" disabled selected>
-                Select Type
+                Type
               </option>
               <option value="hello">hello</option>
             </select>
@@ -102,6 +102,25 @@ function Home() {
             </ul>
         </div>
       </section>
+
+      <section className="about">
+        <div className="about__info">
+          <h3>about us</h3>
+          <h1>Welcome to AutoMark</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi vero est sunt ullam fugiat, temporibus velit sapiente culpa ipsam ducimus, consectetur fugit, eius quos? Laborum molestias numquam ullam quo totam?</p>
+          
+
+        </div>
+        <div  className="about__img">
+        </div>
+
+      </section>
+
+
+      {/* <section className="card">
+
+
+      </section> */}
     </main>
   );
 }
