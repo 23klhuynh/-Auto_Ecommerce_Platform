@@ -248,6 +248,29 @@
   background-position: center;
   background-size:cover;
 }
+/* ////////////////// */
+.brand{
+  color: white;
+  border: 1px solid white;
+  width: 70%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.brand__heading{
+  flex: 1;
+}
+
+.car__brand{
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+
+
 
 
 
@@ -272,7 +295,6 @@
     height: 100vh;
     width: 100vw;
     z-index: 0;
-
   }
   .register__section, .login__section{
     position: absolute;
@@ -285,6 +307,9 @@
     transform: translate(-50%, -50%);
     color: white;
     border: 1px solid white;
+  }
+  .about__img{
+    display: none;
   }
 }
 

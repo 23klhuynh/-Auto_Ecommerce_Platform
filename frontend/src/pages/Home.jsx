@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import img from "../assets/LoginImg.jpg"
+import carBrand from "../data/CarBrand.json"
 
 function Home() {
   const navigate = useNavigate();
@@ -105,11 +106,9 @@ function Home() {
 
       <section className="about">
         <div className="about__info">
-          <h3>about us</h3>
+          <h1>about us</h1>
           <h1>Welcome to AutoMark</h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi vero est sunt ullam fugiat, temporibus velit sapiente culpa ipsam ducimus, consectetur fugit, eius quos? Laborum molestias numquam ullam quo totam?</p>
-          
-
         </div>
         <div  className="about__img">
         </div>
@@ -121,6 +120,20 @@ function Home() {
 
 
       </section> */}
+
+      <section className="brand">
+        <div className="brand__heading">
+        <h1>Popular Car Brand</h1>
+        </div>
+        <ul className="car__brand">
+          {carBrand.popular_car_brands.map((brand, index)=>(
+            <li key={index}>
+              <img src={brand} alt="" />
+            </li>
+            /* "BMW","Mercedes-Benz","Nissan","Volkswagen","Hyundai" */
+          ))}
+        </ul>
+      </section>
     </main>
   );
 }
