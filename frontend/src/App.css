@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -18,14 +16,22 @@
   overflow: hidden;
   width: 100%;
   z-index: 1000;
-  background-color: #1F2937; /* important */
+  background-color: #1f2937; /* important */
   height: 70px;
+  transition: background-color 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.5s;
 }
-.nav-default{
+.navbar__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.nav-default {
   background: transparent;
   backdrop-filter: blur(5px);
 }
@@ -46,21 +52,21 @@
   font-size: 1.2rem;
   font-weight: 500;
 }
-.navbar__item a:hover{
+.navbar__item a:hover {
   color: white;
 }
-.navbar__btn{
+.navbar__btn {
   padding: 5px 20px;
   border-radius: 5px;
   color: white;
   font-size: 1.2rem;
-  background-color: #1D4ED8;
+  background-color: #1d4ed8;
   font-weight: 500;
 }
-.navbar__btn:hover{
-  background-color: #1A3EAB;
+.navbar__btn:hover {
+  background-color: #1a3eab;
 }
-.navbar__mobile{
+.navbar__mobile {
   font-size: 1.5rem;
 }
 
@@ -110,7 +116,8 @@
   color: black;
   flex: 1;
 }
-.login__btns, .register__btns {
+.login__btns,
+.register__btns {
   display: grid;
   text-align: center;
   height: 100%;
@@ -120,7 +127,7 @@
   flex: 1;
   cursor: pointer;
 }
-.login__footer{
+.login__footer {
   display: flex;
   flex: 1;
 }
@@ -133,12 +140,11 @@
   border: 2px solid rgb(255, 158, 174);
   flex: 1;
 }
-.register__footer{
+.register__footer {
   display: flex;
   flex-direction: column;
   height: 50%;
 }
-
 
 .login__image {
   flex: 1;
@@ -149,33 +155,36 @@
   width: 100%;
 }
 /* home page */
-.home_container{
-  height: 200vh;
+.home_container {
+  height: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color:  #1F2937;
+  background-color: #1f2937;
   gap: 10px;
 }
-.home-page{
+.home-page {
   position: relative;
   width: 100%;
   height: 70vh;
   background-image: url("./assets/background-image.jpg");
   background-position: center;
-  background-size:cover;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.home__search-bar, .content, .about{/* wobvnu93rbvrbvb3rvb3eibnvwiebv9ubrv9ebuv3 */
+.home__search-bar,
+.content,
+.about {
+  /* wobvnu93rbvrbvb3rvb3eibnvwiebv9ubrv9ebuv3 */
   width: 70%;
 }
-.home__search-bar{
+.home__search-bar {
   height: 200px;
   position: absolute;
   color: black;
-  background-color: rgba(255, 255, 255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
   display: grid;
   grid-template-columns: auto auto auto;
@@ -183,7 +192,7 @@
   padding: 20px;
   gap: 10px;
 }
-.home__search-bar li{
+.home__search-bar li {
   /* background-color: rgb(176, 176, 176);
   padding: 10px;
   border-radius: 5px; */
@@ -194,7 +203,7 @@
   height: 60px;
   background-color: grey;
 }
-.home__search-bar .home__dropdown{
+.home__search-bar .home__dropdown {
   border: none;
   appearance: none;
   padding: 0 30px 0 15px;
@@ -202,40 +211,41 @@
 }
 
 /* home-content */
-.content{
+.content {
   margin-top: 10px;
-  background-color:#1F2937;
+  background-color: #1f2937;
   color: white;
 }
-.content__main{
+.content__main {
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   border: 1px solid white;
 }
-.content__lists{
+.content__lists {
   display: flex;
   gap: 5px;
 }
-.content__list{
+.content__list {
   flex: 1;
 }
-.content__list img{
+.content__list img {
   background-position: cover;
   background-size: cover;
 }
 /* ///////////////// */
-.about{
+.about {
   color: white;
   display: flex;
   border: 1px solid white;
   height: 300px;
 }
-.about__info, .about__img{
+.about__info,
+.about__img {
   flex: 1;
 }
-.about__info{
+.about__info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -243,13 +253,13 @@
   padding: 10px;
   gap: 10px;
 }
-.about__img{
+.about__img {
   background-image: url("./assets/about-image.jpg");
   background-position: center;
-  background-size:cover;
+  background-size: cover;
 }
 /* ////////////////// */
-.brand{
+.car {
   color: white;
   border: 1px solid white;
   width: 70%;
@@ -258,45 +268,43 @@
   flex-direction: column;
   gap: 10px;
 }
-.brand__heading{
+.car__heading {
   flex: 1;
 }
-
-.car__brand{
+.car__brands {
   flex: 2;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  gap: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
+.car__brand img {
+  border-radius: 10px;
+  height: 200px;
+  width: 100%;
+}
 
 /* responsive */
 @media screen and (max-width: 1000px) {
-  .content, .home__search-bar, .about{
+  .content,
+  .home__search-bar,
+  .about,
+  .car {
     width: 100%;
   }
 }
 @media screen and (max-width: 810px) {
-  .register, .login{
+  .register,
+  .login {
     position: relative;
   }
-  .login__image{
+  .login__image {
     position: absolute;
     height: 100vh;
     width: 100vw;
     z-index: 0;
   }
-  .register__section, .login__section{
+  .register__section,
+  .login__section {
     position: absolute;
     height: 80%;
     min-width: 70%;
@@ -308,36 +316,50 @@
     color: white;
     border: 1px solid white;
   }
-  .about__img{
+  .about__img {
     display: none;
+  }
+  .car__brands {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .car__brand img {
+    height: 100px;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 
-@media screen and (max-width: 450px){
-  .register__section, .login__section{
+@media screen and (max-width: 450px) {
+  .register__section,
+  .login__section {
     min-height: 100%;
     width: 100%;
     backdrop-filter: blur(2px);
   }
-  .content__lists{
+  .content__lists {
     overflow: auto;
-    
   }
-} 
+}
 
-@media screen and (min-width: 550px){
-  .navbar__mobile{
+@media screen and (min-width: 550px) {
+  .navbar__mobile {
     display: none;
   }
-  .navbar__items{
+  .navbar__items {
     display: inherit;
   }
 }
-@media screen and (max-width: 550px){
-  .navbar__mobile{
+@media screen and (max-width: 550px) {
+  .navbar__mobile {
     display: inherit;
   }
-  .navbar__items{
+  .click {
+    height: 30vh;
+  }
+  .navbar__items {
     display: none;
+  }
+  .car__brand img {
+    width: 100%;
   }
 }
