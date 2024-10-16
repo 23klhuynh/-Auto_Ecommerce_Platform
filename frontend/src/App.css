@@ -13,7 +13,6 @@
 .navbar {
   position: fixed;
   top: 0;
-  overflow: hidden;
   width: 100%;
   z-index: 1000;
   background-color: #1f2937; /* important */
@@ -27,7 +26,7 @@
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
@@ -44,6 +43,7 @@
 }
 .navbar__items {
   display: flex;
+
   gap: 25px;
   list-style: none;
 }
@@ -69,6 +69,22 @@
 .navbar__mobile {
   font-size: 1.5rem;
 }
+.navbar__mobile-dropdown{
+  position: absolute;
+  top: 70px;
+  right: 0;
+  padding-left: 30px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 1;
+  background-color: #1d4ed8;
+}
+
+
 
 /* login_form */
 .login,
@@ -348,15 +364,15 @@
   .navbar__items {
     display: inherit;
   }
+  .navbar__mobile-dropdown{
+    display: none;
+  }
 }
 @media screen and (max-width: 550px) {
-  .navbar__mobile {
+  .navbar__mobile, .open {
     display: inherit;
   }
-  .click {
-    height: 30vh;
-  }
-  .navbar__items {
+  .navbar__items, .close {
     display: none;
   }
   .car__brand img {

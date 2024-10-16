@@ -8,24 +8,37 @@ function Navbar({ isScrolled }) {
   const navigate = useNavigate();
   const [isClicked, setIsClicked] = useState(false);
 
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
+
   return (
     <header>
-      <nav
-        className={`navbar ${isScrolled ? "" : "nav-default"} ${
-          isClicked ? "click" : ""
-        }`}
-      >
-        <div className={`navbar__container ${
-          isClicked ? "click" : ""
-        }`}>
+      <nav className={`navbar ${isScrolled ? "" : "nav-default"}`}>
+        <div className={`navbar__container`}>
           <div className="navbar__margin">
-            <button
-              className="navbar__mobile"
-              onClick={() => setIsClicked(!isClicked)}
-            >
+            <button className="navbar__mobile" onClick={handleClick}>
               {isClicked ? <RxCross1 /> : <GiHamburgerMenu />}
             </button>
-            <ul className="navbar__items">
+            {/* mobile dropdown */}
+            <ul
+              className={`navbar__mobile-dropdown ${isClicked ? "open" : "close"}`}
+            >
+              <li>
+                <Link to="/dashboard">HOME</Link>
+              </li>
+              <li>
+                <Link to="/dashboard/shop">SHOP</Link>
+              </li>
+              <li>
+                <Link to="/dashboard/finder">FINDER</Link>
+              </li>
+              <li>
+                <Link to="/dashboard/contact">CONTACT</Link>
+              </li>
+            </ul>
+
+            <ul className={`navbar__items`}>
               <li className="navbar__item">
                 <Link to="/dashboard">HOME</Link>
               </li>
@@ -44,13 +57,6 @@ function Navbar({ isScrolled }) {
               Logout
             </button>
           </div>
-          {isClicked && (
-            <ul>
-              <li>home</li>
-              <li>home</li>
-              <li>home</li>
-            </ul>
-          )}
         </div>
       </nav>
     </header>
