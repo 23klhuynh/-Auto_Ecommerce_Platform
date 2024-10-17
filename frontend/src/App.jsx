@@ -7,6 +7,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
 import NotFoundPage from "./pages/NotFoundPage";
 import useScroll from "./components/useScroll";
+import Footer from "./components/Footer";
 
 function App() {
   
@@ -25,6 +26,7 @@ function App() {
                 <>
                   <Navbar isScrolled={isScrolled}/>
                   <Home />
+                  <Footer/>
                 </>
               </PrivateRoute>
             }
