@@ -55,7 +55,7 @@ function Footer() {
         </ul>
       </div>
       <div className="footer__policy">
-        <h1 className="footer__policy-info"><span>&copy; 2024 AutoMart. All rights reserved</span>  |  <Link>Privacy Policy</Link>  |  <Link>Terms & Conditions</Link></h1>
+        <h1 className="footer__policy-info"><span>&copy; 2024 AutoMart. All rights reserved.</span><Link>Terms & Conditions</Link></h1>
       </div>
     </section>
   );

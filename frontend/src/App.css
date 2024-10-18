@@ -295,7 +295,7 @@
 }
 .car__brand img {
   border-radius: 10px;
-  height: 200px;
+  height: 100px;
   width: 100%;
 }
 
@@ -303,12 +303,16 @@
 .footer{
   background-color: #1f2937;
   padding: 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .footer__section{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
 }
 .footer__items{
@@ -329,12 +333,13 @@
   width: 70%;
   margin: 0 auto;
   color: white;
-  border: 1px solid white;
+  width: 100%;
 }
 .footer__policy-info{
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 
@@ -388,6 +393,12 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media screen and (max-width: 600px){
+  .footer__policy-info{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
 @media screen and (max-width: 450px) {
   .register__section,
@@ -398,6 +409,13 @@
   }
   .content__lists {
     overflow: auto;
+  }
+  .footer__section{
+    grid-template-columns: repeat(1, 1fr);
+    place-items: start;
+  }
+  .footer__policy-info{
+    font-size: 12px;
   }
 }
 
