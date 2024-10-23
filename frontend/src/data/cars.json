@@ -1,10 +1,29 @@
-[
+{
+  "cars": [
     {
-        "id": 1,
-        "make": "Toyota",
-        "model": "Camry",
-        "year": 2022,
-        "color": "Blue",
-        "price": 25000
-      }
-]
+      "make": "Toyota",
+      "model": "Camry",
+      "picture": "https://di-uploads-pod18.dealerinspire.com/toyotaofsmithfield/uploads/2022/08/22-camry-model.png"
+    },
+    {
+      "make": "Honda",
+      "model": "Civic",
+      "picture": "https://di-uploads-pod18.dealerinspire.com/balisehonda1/uploads/2022/08/type-r-model.png"
+    },
+    {
+      "make": "Ford",
+      "model": "F-150",
+      "picture": "https://di-uploads-pod41.dealerinspire.com/fordcrestview/uploads/2023/01/mlp-img-top-2023-f150-temp.png"
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "picture": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/vehicles/2022/trucks/silverado-mcm-mov/o1-images/trims/2022-silverado1500-ck10543-2lt-g7c-trimselector.png"
+    },
+    {
+      "make": "Tesla",
+      "model": "Model 3",
+      "picture": "https://www.tesla.com/ownersmanual/images/GUID-B5641257-9E85-404B-9667-4DA5FDF6D2E7-online-en-US.png"
+    }
+  ]
+}

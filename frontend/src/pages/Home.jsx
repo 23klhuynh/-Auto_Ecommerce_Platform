@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import img from "../assets/LoginImg.jpg"
 import carBrand from "../data/CarBrand.json"
+import cars from "../data/cars.json"
 
 function Home() {
   const navigate = useNavigate();
@@ -80,7 +81,15 @@ function Home() {
           <h2>Your mobility, your choice</h2>
           
             <ul className="content__lists">
-              <li className="content__list">
+              {cars.cars.map((item, index) => (
+                <li className="content__list">
+                <img src={item.picture} alt="" />
+                <p>{item.make} {item.model}</p>
+              </li>
+              ))}
+
+              
+              {/* <li className="content__list">
                 <img src={img} alt="" />
                 <p>kjdvbwjv</p>
               </li>
@@ -95,11 +104,7 @@ function Home() {
               <li className="content__list">
                 <img src={img} alt="" />
                 <p>kjdvbwjv</p>
-              </li>
-              <li className="content__list">
-                <img src={img} alt="" />
-                <p>kjdvbwjv</p>
-              </li>
+              </li> */}
             </ul>
         </div>
       </section>
