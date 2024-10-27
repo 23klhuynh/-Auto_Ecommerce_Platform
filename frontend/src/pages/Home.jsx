@@ -26,56 +26,58 @@ function Home() {
     <main className="home_container">
       <section className="home-page">
         <ul className="home__search-bar">
-          <li>
-            <select name="maker" id="" className="home__dropdown">
-              <option value="" disabled selected>
-                Maker
-              </option>
-              <option value="hello">hello</option>
-            </select>
+          <li className="home__dropdown">
+            <a href="" className="home__btn">Maker</a>
+            <div className="dropdown-content">
+              <a href="">l1</a>
+              <a href="">l2</a>
+              <a href="">l3</a>
+            </div>
           </li>
-          <li>
-            <select name="model" id="" className="home__dropdown">
-              <option value="" disabled selected>
-                Model
-              </option>
-              <option value="hello">hello</option>
-            </select>
+          <li className="home__dropdown">
+            <a href="" className="home__btn">Maker</a>
+            <div className="dropdown-content">
+              <a href="">l1</a>
+              <a href="">l2</a>
+              <a href="">l3</a>
+            </div>
           </li>
-          <li>
-            <select name="year" id="" className="home__dropdown">
-              <option value="" disabled selected>
-                Year
-              </option>
-              <option value="hello">hello</option>
-            </select>
+          <li className="home__dropdown">
+            <a href="" className="home__btn">Maker</a>
+            <div className="dropdown-content">
+              <a href="">l1</a>
+              <a href="">l2</a>
+              <a href="">l3</a>
+            </div>
           </li>
-          <li>
-            <select name="price" id="" className="home__dropdown">
-              <option value="" disabled selected>
-                Price
-              </option>
-              <option value="hello">hello</option>
-            </select>
+          <li className="home__dropdown">
+            <a href="" className="home__btn">Maker</a>
+            <div className="dropdown-content">
+              <a href="">l1</a>
+              <a href="">l2</a>
+              <a href="">l3</a>
+            </div>
           </li>
-          <li>
-            <select name="condition" id="" className="home__dropdown">
-              <option value="" disabled selected>
-                Condition
-              </option>
-              <option value="hello">hello</option>
-            </select>
+          <li className="home__dropdown">
+            <a href="" className="home__btn">Maker</a>
+            <div className="dropdown-content">
+              <a href="">l1</a>
+              <a href="">l2</a>
+              <a href="">l3</a>
+            </div>
           </li>
-          <li>
-            <select name="type" id="" className="home__dropdown">
-              <option value="" disabled selected>
-                Type
-              </option>
-              <option value="hello">hello</option>
-            </select>
+          <li className="home__dropdown">
+            <a href="" className="home__btn">Maker</a>
+            <div className="dropdown-content">
+              <a href="">l1</a>
+              <a href="">l2</a>
+              <a href="">l3</a>
+            </div>
           </li>
         </ul>
       </section>
+
+
       <section className="content">
         <div className="content__main">
           <h2>Your mobility, your choice</h2>
