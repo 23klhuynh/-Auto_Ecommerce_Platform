@@ -6,7 +6,15 @@ import carBrand from "../data/CarBrand.json"
 import cars from "../data/cars.json"
 
 function Home() {
+
+  const [make, setMake] = useState("Maker");
+  const [model, setModel] = useState("Model");
+  const [year, setYear] = useState("Year");
+  const [bodyType, setBodyType] = useState("Body-Type");
+  const [engType, setEngType] = useState("Engine-Type");
+
   const navigate = useNavigate();
+
   useEffect(() => {
     const authentication = async () => {
       try {
@@ -22,58 +30,61 @@ function Home() {
     };
     authentication();
   }, [navigate]);
+
+
   return (
     <main className="home_container">
       <section className="home-page">
         <ul className="home__search-bar">
           <li className="home__dropdown">
-            <a href="" className="home__btn">Maker</a>
+            <a href="" className="home__btn">{make}</a>
             <div className="dropdown-content">
-              <a href="">l1</a>
-              <a href="">l2</a>
-              <a href="">l3</a>
+              <button href="#" onClick={() => setMake("l1")}>l1</button>
+              <button href="#" onClick={() => setMake("l2")}>l2</button>
+              <button href="#" onClick={() => setMake("l3")}>l3</button>
             </div>
           </li>
           <li className="home__dropdown">
-            <a href="" className="home__btn">Maker</a>
+            <a href="" className="home__btn">{model}</a>
             <div className="dropdown-content">
-              <a href="">l1</a>
-              <a href="">l2</a>
-              <a href="">l3</a>
+              <button href="#" onClick={() => setModel("l1")}>l1</button>
+              <button href="#" onClick={() => setModel("l2")}>l2</button>
+              <button href="#" onClick={() => setModel("l3")}>l3</button>
             </div>
           </li>
           <li className="home__dropdown">
-            <a href="" className="home__btn">Maker</a>
+            <a href="" className="home__btn">{year}</a>
             <div className="dropdown-content">
-              <a href="">l1</a>
-              <a href="">l2</a>
-              <a href="">l3</a>
+              <button href="#" onClick={() => setYear("l1")}>l1</button>
+              <button href="#" onClick={() => setYear("l2")}>l2</button>
+              <button href="#" onClick={() => setYear("l3")}>l3</button>
             </div>
           </li>
           <li className="home__dropdown">
-            <a href="" className="home__btn">Maker</a>
+            <a href="" className="home__btn">{bodyType}</a>
             <div className="dropdown-content">
-              <a href="">l1</a>
-              <a href="">l2</a>
-              <a href="">l3</a>
+              <button href="#" onClick={() => setBodyType("l1")}>l1</button>
+              <button href="#" onClick={() => setBodyType("l2")}>l2</button>
+              <button href="#" onClick={() => setBodyType("l3")}>l3</button>
             </div>
           </li>
           <li className="home__dropdown">
-            <a href="" className="home__btn">Maker</a>
+            <a href="" className="home__btn">{engType}</a>
             <div className="dropdown-content">
-              <a href="">l1</a>
-              <a href="">l2</a>
-              <a href="">l3</a>
+              <button href="#" onClick={() => setEngType("l1")}>l1</button>
+              <button href="#" onClick={() => setEngType("l2")}>l2</button>
+              <button href="#" onClick={() => setEngType("l3")}>l3</button>
             </div>
           </li>
           <li className="home__dropdown">
-            <a href="" className="home__btn">Maker</a>
+            <a href="" className="home__btn">submit</a>
             <div className="dropdown-content">
-              <a href="">l1</a>
-              <a href="">l2</a>
-              <a href="">l3</a>
+              <button href="#" onClick={() => setMake("l1")}>l1</button>
+              <button href="#" onClick={() => setMake("l2")}>l2</button>
+              <button href="#" onClick={() => setMake("l3")}>l3</button>
             </div>
           </li>
+          
         </ul>
       </section>
 
