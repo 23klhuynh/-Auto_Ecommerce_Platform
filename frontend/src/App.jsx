@@ -10,8 +10,7 @@ import useScroll from "./components/useScroll";
 import Footer from "./components/Footer";
 
 function App() {
-  
-  const isScrolled = useScroll()
+  const isScrolled = useScroll();
   return (
     <>
       <Router>
@@ -24,9 +23,9 @@ function App() {
             element={
               <PrivateRoute>
                 <>
-                  <Navbar isScrolled={isScrolled}/>
+                  <Navbar isScrolled={isScrolled} />
                   <Home />
-                  <Footer/>
+                  <Footer />
                 </>
               </PrivateRoute>
             }

@@ -76,13 +76,8 @@ function Home() {
               <button href="#" onClick={() => setEngType("l3")}>l3</button>
             </div>
           </li>
-          <li className="home__dropdown">
-            <a href="" className="home__btn">submit</a>
-            <div className="dropdown-content">
-              <button href="#" onClick={() => setMake("l1")}>l1</button>
-              <button href="#" onClick={() => setMake("l2")}>l2</button>
-              <button href="#" onClick={() => setMake("l3")}>l3</button>
-            </div>
+          <li className="home__dropdown home__btn">
+            <button href="" className="home__submit-btn">submit</button>
           </li>
           
         </ul>
