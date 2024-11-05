@@ -8,27 +8,29 @@ import Home from "./pages/Home";
 import NotFoundPage from "./pages/NotFoundPage";
 import useScroll from "./components/useScroll";
 import Footer from "./components/Footer";
+import Contact from "./pages/Contact";
 
 function App() {
   const isScrolled = useScroll();
+
+  const renderPrivateRoute = (Component) => (
+    <PrivateRoute>
+      <Navbar isScrolled={isScrolled} />
+      <Component />
+      <Footer />
+    </PrivateRoute>
+  );
+
   return (
     <>
       <Router>
         <Routes>
-          <Route exact path="/login" element={<LoginForm />} />
-          <Route exact path="/register" element={<RegisterForm />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/dashboard" element={renderPrivateRoute(Home)} />
           <Route
-            exact
-            path="/home"
-            element={
-              <PrivateRoute>
-                <>
-                  <Navbar isScrolled={isScrolled} />
-                  <Home />
-                  <Footer />
-                </>
-              </PrivateRoute>
-            }
+            path="/dashboard/contact"
+            element={renderPrivateRoute(Contact)}
           />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

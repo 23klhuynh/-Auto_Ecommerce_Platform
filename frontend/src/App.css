@@ -367,6 +367,18 @@
   gap: 10px;
 }
 
+/* contact */
+.contact-section{
+  height: 68.3vh;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+
+
 
 
 
