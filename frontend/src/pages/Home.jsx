@@ -76,8 +76,8 @@ function Home() {
               <button href="#" onClick={() => setEngType("l3")}>l3</button>
             </div>
           </li>
-          <li className="home__dropdown home__btn">
-            <button href="" className="home__submit-btn">submit</button>
+          <li className="home__dropdown home__submit-btn">
+            <button href="" className="">submit</button>
           </li>
           
         </ul>

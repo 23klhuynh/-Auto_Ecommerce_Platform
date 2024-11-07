@@ -213,6 +213,7 @@
   align-content: center;
   position: relative;
   background-color: grey;
+  transition: background-color 0.6s ease-in-out;
 }
 .home__btn{
   display: inline-block;
@@ -232,15 +233,16 @@
 }
 .home__dropdown:hover{
   cursor: pointer;
+  background-color: rgb(114, 114, 114);
 }
 .home__dropdown:hover .dropdown-content{
   display: block;
-  background-color: whitesmoke;
+  background-color: #85929e;
 }
 .dropdown-content:hover button:hover{
-  background-color: wheat;
+  background-color: #aeb6bf;
 }
-.home__btn:hover{
+.home__submit-btn:hover{
   background-color: tomato;
 }
 
@@ -369,12 +371,45 @@
 
 /* contact */
 .contact-section{
-  height: 68.3vh;
-  background-color: grey;
+  height: 90vh;
+  background-color: #85929e;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
+  padding: 10px;
+}
+.contact__container{
+  display: grid;
+  gap: 10px;
+}
+.contact__header{
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+}
+.contact__form{
+  display: grid;
+  gap: 10px;
+}
+.contact__form .contact__form-group{
+  display: flex;
+  flex-direction: column;
+}
+.contact__btn{
+  border: 1px solid white;
+  transition: background-color 0.5s ease;
+}
+.contact__btn:hover{
+  background-color: black;
+  color: white;
+}
+.contact__social{
+  display: flex;
+  gap: 10px;
+}
+.contact__info p, .contact__social{
+  font-size: 1.25rem;
 }
 
 
