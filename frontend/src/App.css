@@ -412,6 +412,42 @@
   font-size: 1.25rem;
 }
 
+/* Finder */
+.finder{
+  height: 150vh;
+  background-color: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.finder__container{
+  display: flex;
+  padding: 100px;
+}
+.finder__search-section{
+  flex: 1;
+  display: grid;
+  border: 1px solid grey;
+}
+.finder__search-section h1{
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  border-bottom: 3px solid white;
+}
+.finder__basic, .finder__style, .finder__features{
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+.finder__make, .finder__model, .finder__year, .finder__body-style, .finder__exterior-color, .finder__interior-color, .finder__engine-type{
+  height: 50px; 
+  border-radius: 10px;
+}
+.finder__contents{
+  flex: 2.5;
+}
+
 
 
 

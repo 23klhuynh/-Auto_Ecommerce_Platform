@@ -7,10 +7,10 @@ import cars from "../data/cars.json"
 
 function Home() {
 
-  const [make, setMake] = useState("Maker");
+  const [make, setMake] = useState("Make");
   const [model, setModel] = useState("Model");
   const [year, setYear] = useState("Year");
-  const [bodyType, setBodyType] = useState("Body-Type");
+  const [bodyType, setBodyType] = useState("Body style");
   const [engType, setEngType] = useState("Engine-Type");
 
   const navigate = useNavigate();

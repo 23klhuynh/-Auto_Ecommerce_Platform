@@ -9,6 +9,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import useScroll from "./components/useScroll";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
+import Finder from "./pages/Finder";
 
 function App() {
   const isScrolled = useScroll();
@@ -31,6 +32,10 @@ function App() {
           <Route
             path="/dashboard/contact"
             element={renderPrivateRoute(Contact)}
+          />
+          <Route
+            path="/dashboard/finder"
+            element={renderPrivateRoute(Finder)}
           />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
