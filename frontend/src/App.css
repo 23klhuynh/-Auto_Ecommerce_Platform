@@ -69,7 +69,7 @@
 .navbar__mobile {
   font-size: 1.5rem;
 }
-.navbar__mobile-dropdown{
+.navbar__mobile-dropdown {
   position: absolute;
   top: 70px;
   right: 0;
@@ -83,8 +83,6 @@
   z-index: 1;
   background-color: #1d4ed8;
 }
-
-
 
 /* login_form */
 .login,
@@ -192,7 +190,7 @@
 }
 .home__search-bar,
 .content,
-.about{
+.about {
   /* wobvnu93rbvrbvb3rvb3eibnvwiebv9ubrv9ebuv3 */
   width: 70%;
 }
@@ -208,41 +206,41 @@
   padding: 20px;
   gap: 10px;
 }
-.home__dropdown{
+.home__dropdown {
   display: inline-block;
   align-content: center;
   position: relative;
   background-color: grey;
   transition: background-color 0.6s ease-in-out;
 }
-.home__btn{
+.home__btn {
   display: inline-block;
   padding: 20px;
 }
-.dropdown-content{
+.dropdown-content {
   width: 100%;
   display: none;
   position: absolute;
   text-align: center;
   z-index: 999;
 }
-.dropdown-content button{
+.dropdown-content button {
   display: block;
   padding: 20px;
   width: 100%;
 }
-.home__dropdown:hover{
+.home__dropdown:hover {
   cursor: pointer;
   background-color: rgb(114, 114, 114);
 }
-.home__dropdown:hover .dropdown-content{
+.home__dropdown:hover .dropdown-content {
   display: block;
   background-color: #85929e;
 }
-.dropdown-content:hover button:hover{
+.dropdown-content:hover button:hover {
   background-color: #aeb6bf;
 }
-.home__submit-btn:hover{
+.home__submit-btn:hover {
   background-color: tomato;
 }
 
@@ -264,7 +262,7 @@
   gap: 5px;
 }
 .content__lists::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 .content__list {
   flex: 1;
@@ -327,7 +325,7 @@
 }
 
 /* footer */
-.footer{
+.footer {
   background-color: #1f2937;
   padding: 10px 0;
   width: 100%;
@@ -335,34 +333,34 @@
   flex-direction: column;
   gap: 20px;
 }
-.footer__section{
+.footer__section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
   width: 100%;
   margin: 0 auto;
 }
-.footer__items{
+.footer__items {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 30px;
   height: 250px;
 }
-.footer__items h1{
+.footer__items h1 {
   color: white;
   font-size: 20px;
 }
-.footer__item{
+.footer__item {
   color: grey;
 }
-.footer__policy{
+.footer__policy {
   width: 70%;
   margin: 0 auto;
   color: white;
   width: 100%;
 }
-.footer__policy-info{
+.footer__policy-info {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -370,7 +368,7 @@
 }
 
 /* contact */
-.contact-section{
+.contact-section {
   height: 90vh;
   background-color: #85929e;
   display: flex;
@@ -379,76 +377,118 @@
   gap: 50px;
   padding: 10px;
 }
-.contact__container{
+.contact__container {
   display: grid;
   gap: 10px;
 }
-.contact__header{
+.contact__header {
   text-align: center;
   font-size: 2rem;
   color: black;
 }
-.contact__form{
+.contact__form {
   display: grid;
   gap: 10px;
 }
-.contact__form .contact__form-group{
+.contact__form .contact__form-group {
   display: flex;
   flex-direction: column;
 }
-.contact__btn{
+.contact__btn {
   border: 1px solid white;
   transition: background-color 0.5s ease;
 }
-.contact__btn:hover{
+.contact__btn:hover {
   background-color: black;
   color: white;
 }
-.contact__social{
+.contact__social {
   display: flex;
   gap: 10px;
 }
-.contact__info p, .contact__social{
+.contact__info p,
+.contact__social {
   font-size: 1.25rem;
 }
 
 /* Finder */
-.finder{
+.finder {
   height: 150vh;
   background-color: #1f2937;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-.finder__container{
+.finder__container {
   display: flex;
-  padding: 100px;
+  padding: 100px 70px;
+  gap: 25px;
 }
-.finder__search-section{
+.finder__search-section {
   flex: 1;
   display: grid;
   border: 1px solid grey;
 }
-.finder__search-section h1{
+.finder__search-section h1 {
   color: white;
   font-size: 2rem;
   padding: 10px;
   border-bottom: 3px solid white;
 }
-.finder__basic, .finder__style, .finder__features{
+.finder__basic,
+.finder__style,
+.finder__features,
+.finder__btn {
   display: grid;
   gap: 10px;
   padding: 10px;
 }
-.finder__make, .finder__model, .finder__year, .finder__body-style, .finder__exterior-color, .finder__interior-color, .finder__engine-type{
-  height: 50px; 
+.finder__make,
+.finder__model,
+.finder__year,
+.finder__body-style,
+.finder__exterior-color,
+.finder__interior-color,
+.finder__engine-type{
+  height: 50px;
   border-radius: 10px;
 }
-.finder__contents{
-  flex: 2.5;
+.finder__btn{
+  background-color: tomato;
+  height: 50px;
+  transition: background-color 0.5s ease-out;
+}
+.finder__btn:hover {
+  background-color: red;
+}
+/* finder mobile */
+.finder__mobile{
+  color: white;
+}
+.mobile__container{
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+  padding: 7px;
+}
+.mobile__btn button, .mobile__filter button{
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 0 30px;
+}
+.mobile__filter button{
+  background-color: black;
+}
+.mobile__vert-line{
+  border: 1px solid gray;
 }
 
-
+/* finder mobile */
+.finder__contents {
+  flex: 2.5;
+  border: 1px solid grey;
+  color: white;
+}
 
 
 
@@ -469,6 +509,20 @@
   .content__list {
     flex: 0 0 auto;
     width: 200px;
+  }
+  .finder__container{
+    flex-direction: column;
+  }
+  .finder__search-section{
+    display: none;
+  }
+  .finder__mobile{
+    display: block;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .finder__mobile{
+    display: none;
   }
 }
 @media screen and (max-width: 810px) {
@@ -506,12 +560,12 @@
     width: 50%;
     margin: 0 auto;
   }
-  .footer__section{
+  .footer__section {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 600px){
-  .footer__policy-info{
+@media screen and (max-width: 600px) {
+  .footer__policy-info {
     display: flex;
     flex-wrap: wrap;
   }
@@ -524,11 +578,11 @@
     width: 100%;
     backdrop-filter: blur(2px);
   }
-  .footer__section{
+  .footer__section {
     grid-template-columns: repeat(1, 1fr);
     place-items: start;
   }
-  .footer__policy-info{
+  .footer__policy-info {
     font-size: 12px;
   }
 }
@@ -540,15 +594,17 @@
   .navbar__items {
     display: inherit;
   }
-  .navbar__mobile-dropdown{
+  .navbar__mobile-dropdown {
     display: none;
   }
 }
 @media screen and (max-width: 550px) {
-  .navbar__mobile, .open {
+  .navbar__mobile,
+  .open {
     display: inherit;
   }
-  .navbar__items, .close {
+  .navbar__items,
+  .close {
     display: none;
   }
   .car__brand img {
