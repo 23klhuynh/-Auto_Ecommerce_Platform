@@ -496,9 +496,16 @@
 /* finder mobile */
 .finder__contents {
   flex: 2.5;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
+.finder__contents-header, .finder__contents-body{
+  border: 1px solid grey;
+}
+
 
 
 

@@ -80,30 +80,35 @@ function Finder() {
         {/* mobile */}
 
         <div className="finder__contents">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            voluptatem quae delectus in. Maiores ipsam, quidem praesentium
-            deserunt commodi quaerat labore, repudiandae corrupti nobis
-            blanditiis aliquam laudantium cum fuga repellendus?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            voluptatem quae delectus in. Maiores ipsam, quidem praesentium
-            deserunt commodi quaerat labore, repudiandae corrupti nobis
-            blanditiis aliquam laudantium cum fuga repellendus?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            voluptatem quae delectus in. Maiores ipsam, quidem praesentium
-            deserunt commodi quaerat labore, repudiandae corrupti nobis
-            blanditiis aliquam laudantium cum fuga repellendus?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            voluptatem quae delectus in. Maiores ipsam, quidem praesentium
-            deserunt commodi quaerat labore, repudiandae corrupti nobis
-            blanditiis aliquam laudantium cum fuga repellendus?
-          </p>
+          <div className="finder__contents-header">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium sed odio dignissimos dolore, numquam architecto error vel velit, consectetur sit eum non quaerat deserunt officia illum cupiditate. Natus et voluptatum fugit atque! Maiores iure repellendus tempora odio beatae explicabo necessitatibus laborum amet nostrum ut dolor, excepturi officia asperiores vitae quia. Quo hic nam cumque vero dolores, cupiditate sed debitis recusandae distinctio! Inventore impedit error rem quo earum alias unde dolore culpa aliquam tempora dolorum in quasi, quas nesciunt fuga iste excepturi eveniet voluptas dicta repellat ipsa!
+          </div>
+          <div className="finder__contents-body">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              voluptatem quae delectus in. Maiores ipsam, quidem praesentium
+              deserunt commodi quaerat labore, repudiandae corrupti nobis
+              blanditiis aliquam laudantium cum fuga repellendus?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              voluptatem quae delectus in. Maiores ipsam, quidem praesentium
+              deserunt commodi quaerat labore, repudiandae corrupti nobis
+              blanditiis aliquam laudantium cum fuga repellendus?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              voluptatem quae delectus in. Maiores ipsam, quidem praesentium
+              deserunt commodi quaerat labore, repudiandae corrupti nobis
+              blanditiis aliquam laudantium cum fuga repellendus?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              voluptatem quae delectus in. Maiores ipsam, quidem praesentium
+              deserunt commodi quaerat labore, repudiandae corrupti nobis
+              blanditiis aliquam laudantium cum fuga repellendus?
+            </p>
+          </div>
         </div>
       </div>
     </div>
