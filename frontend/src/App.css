@@ -506,7 +506,6 @@
 
 /* Shop */
 .shop{
-  height: 100vh;
   background-color: gray;
   display: flex;
   justify-content: center;
@@ -516,12 +515,19 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  background-color: white;
+  background-color: grey;
   width: 100%;
+  margin:5% 0;
+  padding: 100px;
 } 
 .shop__card{
   width: 100%;
-  height: 100px;
+  min-height: 100px;
+  background-color: white;
+}
+.shop__card:hover{
+  cursor: pointer;
+  background-color: whitesmoke;
 }
 .shop__card h1 {
   margin: 0;
@@ -560,6 +566,10 @@
   }
   .finder__mobile{
     display: block;
+  }
+  .shop__cards{
+    padding: 0;
+    margin: 15% 0;
   }
 }
 @media screen and (min-width: 1000px) {
