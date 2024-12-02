@@ -169,7 +169,7 @@
   width: 100%;
 }
 /* home page */
-.home_container {
+.home-container {
   height: auto;
   display: flex;
   align-items: center;
