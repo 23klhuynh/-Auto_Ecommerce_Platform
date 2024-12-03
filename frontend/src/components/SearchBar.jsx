@@ -1,6 +1,6 @@
 import React from 'react'
 import HomeDropdown from "../components/HomeDropdown";
-
+import SubmitButton from './SubmitButton';
 
 function SearchBar({carSelection, handleSelect}) {
   return (
@@ -14,11 +14,7 @@ function SearchBar({carSelection, handleSelect}) {
             handleSelect={handleSelect}
             />
           ))}
-          <li className="home__dropdown home__submit-btn">
-            <button className="submit-btn">
-              submit
-            </button>
-          </li>
+          <SubmitButton className="home__dropdown home__submit-btn" text="Submit"/>
         </ul>
       </section>
   )

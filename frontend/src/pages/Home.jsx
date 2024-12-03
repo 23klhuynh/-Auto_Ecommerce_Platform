@@ -25,9 +25,7 @@ function Home() {
         });
       } catch (error) {
         console.log("error");
-        if (error.response && error.response.status === 401) {
-          navigate("/login");
-        }
+        if (error.response?.status === 401) navigate("/login");
       }
     };
     authentication();
