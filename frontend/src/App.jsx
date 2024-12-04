@@ -38,12 +38,10 @@ function App() {
             path="/dashboard/finder"
             element={renderPrivateRoute(Finder)}
           />
-          <Route 
-          path="/dashboard/shop"
-          element={renderPrivateRoute(Shop)}
-          >
-
-          </Route>
+          <Route
+            path="/dashboard/shop"
+            element={renderPrivateRoute(Shop)}
+          ></Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Router>
