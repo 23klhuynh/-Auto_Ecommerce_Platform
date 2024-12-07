@@ -1,6 +1,6 @@
 import React from "react";
 import FormField from "../components/FormField";
-import SubmitButton from "../components/SubmitButton";
+import SubmitButton from "../fragment/SubmitButton";
 
 function ContactForm() {
   return (

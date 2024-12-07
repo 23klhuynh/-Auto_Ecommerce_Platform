@@ -1,6 +1,6 @@
 import React from 'react'
 import HomeDropdown from "../components/HomeDropdown";
-import SubmitButton from './SubmitButton';
+import SubmitButton from '../fragment/SubmitButton';
 
 function SearchBar({carSelection, handleSelect}) {
   return (

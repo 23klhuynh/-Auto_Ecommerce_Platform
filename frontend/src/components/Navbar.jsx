@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import NavbarMenu from "./NavbarMenu";
+import SubmitButton from "../fragment/SubmitButton";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
@@ -12,6 +13,8 @@ function Navbar({ isScrolled }) {
     setIsClicked(!isClicked);
   };
 
+  // need to clean up this code 
+
   return (
     <header>
       <nav className={`navbar ${isScrolled ? "" : "nav-default"}`}>
@@ -22,40 +25,22 @@ function Navbar({ isScrolled }) {
             </button>
             {/* mobile dropdown */}
             <ul
-              className={`navbar__mobile-dropdown ${isClicked ? "open" : "close"}`}
+              className={`navbar__mobile-dropdown ${
+                isClicked ? "open" : "close"
+              }`}
             >
-              <li>
-                <Link to="/dashboard">HOME</Link>
-              </li>
-              <li>
-                <Link to="/dashboard/shop">SHOP</Link>
-              </li>
-              <li>
-                <Link to="/dashboard/finder">FINDER</Link>
-              </li>
-              <li>
-                <Link to="/dashboard/contact">CONTACT</Link>
-              </li>
+              <NavbarMenu />
             </ul>
 
             <ul className={`navbar__items`}>
-              <li className="navbar__item">
-                <Link to="/dashboard">HOME</Link>
-              </li>
-              <li className="navbar__item">
-                <Link to="/dashboard/shop">SHOP</Link>
-              </li>
-              <li className="navbar__item">
-                <Link to="/dashboard/finder">FINDER</Link>
-              </li>
-              <li className="navbar__item">
-                <Link to="/dashboard/contact">CONTACT</Link>
-              </li>
+              <NavbarMenu className="navbar__item" />
             </ul>
 
-            <button className="navbar__btn" onClick={() => navigate("/login")}>
-              Logout
-            </button>
+            <SubmitButton
+              className="navbar__btn"
+              onClick={() => navigate("/login")}
+              text="Logout"
+            />
           </div>
         </div>
       </nav>

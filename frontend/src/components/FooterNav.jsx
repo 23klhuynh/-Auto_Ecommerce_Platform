@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FooterLinks from "./FooterLinks";
+import FooterLinks from "../fragment/FooterLinks";
 
 function FooterNav() {
   return (
