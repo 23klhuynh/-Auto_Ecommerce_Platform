@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import LoginImg from "../assets/LoginImg.jpg";
-import { Link } from "react-router-dom";
+import RegisterInputForm from "./RegisterInputForm";
+import RegisterBtn from "./RegisterBtn";
+import Header from "../fragment/Header";
 
 function RegisterForm() {
   const [email, setEmail] = useState("");
@@ -12,6 +14,10 @@ function RegisterForm() {
   const navigate = useNavigate();
 
   localStorage.removeItem("authToken");
+
+  const handleLogin = () => {
+    navigate("/login")
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,60 +40,28 @@ function RegisterForm() {
       setMessage("Invalid password!");
     }
   };
+  
   return (
-    <div className="register">
-      <div className="register__section">
-        <div className="register__header">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-            Sign Up
-          </h1>
-        </div>
+    <main className="register">
+      <section className="register__section">
+        <Header text="Sign Up"/>
         <div className="register__box">
-          <form onSubmit={handleSubmit} className="register__form">
-            <input
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email!"
-            />
-            <input
-              type="password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password!"
-            />
-            <input
-              type="password"
-              required
-              value={comfirmPassword}
-              onChange={(e) => setComfirmPassword(e.target.value)}
-              placeholder="Confirmed!"
-            />
-          </form>
-          <div className="register__btns">
-            <div className="register__footer">
-              <p className="register__recommend text-xs sm:text-xs md:text-sm lg:text-md xl:text-xl">
-                Already a Member? <button className="text-blue-700" onClick={()=>navigate("/login")}>Sign In</button>
-              </p>
-
-              <button
-                className="register__btn"
-                onClick={(e) => handleSubmit(e)}
-              >
-                Sign up
-              </button>
-              {message && <span className="btn text-red-400">{message}</span>}
-            </div>
-            
-          </div>
+          <RegisterInputForm
+            handleSubmit={handleSubmit}
+            email={email}
+            setEmail={setEmail}
+            password={password}
+            setPassword={setPassword}
+            comfirmPassword={comfirmPassword}
+            setComfirmPassword={setComfirmPassword}
+          />
+          <RegisterBtn handleLogin={handleLogin} handleSubmit={handleSubmit} message={message}/>
         </div>
-      </div>
-      <div className="login__image">
+      </section>
+      <section className="login__image">
         <img src={LoginImg} alt="image" />
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 
